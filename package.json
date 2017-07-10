@@ -1,7 +1,7 @@
 {
   "name": "evaluate-string",
   "version": "1.0.0",
-  "description": "",
+  "description": "Convert strings to respective types",
   "main": "index.js",
   "scripts": {
     "test": "./test.sh"
@@ -12,5 +12,8 @@
   "devDependencies": {
     "chai": "^4.0.2",
     "mocha": "^3.4.2"
+  },
+  "engines": {
+    "node": ">=0.7.0"
   }
 }

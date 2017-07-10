@@ -44,6 +44,18 @@ describe('evaluate-string', () => {
 
     it('should evalute true', () => {
       expect(evaluateString('true')).to.be.true
+    })
+  })
+
+  describe('evaluate objects', () => {
+    it('should evalute objects', () => {
+      expect(evaluateString(`{id: 1, name: 'john snow'}`))
+        .to.be.deep.equal({id: 1, name: 'john snow'})
+    })
+
+    it('should evalute json objects', () => {
+      expect(evaluateString('{"id": 1, "name": "john snow"}'))
+        .to.be.deep.equal({id: 1, name: 'john snow'})
     }) 
   })
 })

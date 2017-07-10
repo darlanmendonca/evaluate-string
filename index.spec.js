@@ -58,4 +58,23 @@ describe('evaluate-string', () => {
         .to.be.deep.equal({id: 1, name: 'john snow'})
     }) 
   })
+
+  describe('evaluate arrays', () => {
+    it('should evalute array of numbers', () => {
+      expect(evaluateString('[1, 2]')).to.be.deep.equal([1, 2])
+    })
+
+    it('should evalute array of strings', () => {
+      expect(evaluateString(`['a', 'b']`)).to.be.deep.equal(['a', 'b'])
+    })
+
+    it('should evalute array of booleans', () => {
+      expect(evaluateString(`[true, false]`)).to.be.deep.equal([true, false])
+    })
+
+    it('should evalute array of objects', () => {
+      expect(evaluateString(`[{id: 1, name: 'john'}, {"id": 2, "name": "snow"}]`))
+        .to.be.deep.equal([{id: 1, name: 'john'}, {id: 2, name: 'snow'}])
+    })
+  })
 })

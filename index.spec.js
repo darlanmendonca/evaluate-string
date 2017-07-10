@@ -36,4 +36,14 @@ describe('evaluate-string', () => {
       expect(evaluateString('1e4')).to.be.equal(10000)
     })
   })
+
+  describe('evaluate booleans', () => {
+    it('should evalute false', () => {
+      expect(evaluateString('false')).to.be.false
+    })
+
+    it('should evalute true', () => {
+      expect(evaluateString('true')).to.be.true
+    }) 
+  })
 })

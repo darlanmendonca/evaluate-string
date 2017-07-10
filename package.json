@@ -6,7 +6,12 @@
   "scripts": {
     "test": "./test.sh"
   },
-  "keywords": [],
+  "keywords": [
+    "evaluate",
+    "parse",
+    "convert",
+    "strings"
+  ],
   "author": "Darlan Mendonça <darlanmendonca@gmail.com> (https://darlanmendonca.github.io)",
   "license": "MIT",
   "devDependencies": {

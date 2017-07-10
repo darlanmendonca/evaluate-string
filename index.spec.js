@@ -18,4 +18,22 @@ describe('evaluate-string', () => {
       expect(evaluateString('john snow')).to.be.equal('john snow')
     })
   })
+
+  describe('evaluate numbers', () => {
+    it('should evalute negative numbers', () => {
+      expect(evaluateString('-10')).to.be.equal(-10)
+    })
+
+    it('should evalute 0 number', () => {
+      expect(evaluateString('0')).to.be.equal(0)
+    })
+
+    it('should evalute positive numbers', () => {
+      expect(evaluateString('33')).to.be.equal(33)
+    })
+
+    it('should evalute scientific numbers', () => {
+      expect(evaluateString('1e4')).to.be.equal(10000)
+    })
+  })
 })
